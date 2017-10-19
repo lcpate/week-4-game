@@ -4,7 +4,7 @@ var pinkValue="";
 var blueValue="";
 var yellowValue="";
 var purpleValue="";
-var score = 0;
+var userScore = 0;
 var wins = 0;
 var losses = 0;
 
@@ -41,64 +41,69 @@ $(document).ready(function(){
 			document.querySelector("#losses").innerHTML = "Losses: " + losses;
 		};
 
-var reset = function (){
-	var targetNum = "";
-	var pinkValue="";
-	var blueValue="";
-	var yellowValue="";
-	var purpleValue="";
-	var score = 0;
-	console.log(reset);
-};
+		var reset = function (){
+			targetNum = "";
+			pinkValue="";
+			blueValue="";
+			yellowValue="";
+			purpleValue="";
+			userScore = 0;
+			$("#userScore").text(userScore);
+	
+		};
+
 
  // Functions to increase score/ wins/ losses when the crystal is selected
 	$("#pink").on("click", function(){
-		$("#userScore").text(score += pinkValue);
-		if (score === targetNum){
+		$("#userScore").text(userScore += pinkValue);
+		if (userScore === targetNum){
 			wins++;
 			updatewins();
 			reset();
 			
-		} if (score > targetNum) 
+			
+		} else if  (userScore > targetNum) 
 			losses++;
 			updatelosses();
 			reset();
+			
 	});
 
 	$("#blue").on("click", function(){
-		$("#userScore").text(score += blueValue);
-		if (score === targetNum){
+		$("#userScore").text(userScore += blueValue);
+		if (userScore === targetNum){
 			wins++;
 			updatewins();
 			reset();
 			
-		} if (score > targetNum) 
+			
+		} else if (userScore > targetNum) 
 			losses++;
 			updatelosses();
 			reset();
 	});
 
 	$("#yellow").on("click", function(){
-		$("#userScore").text(score += yellowValue);
-		if (score === targetNum){
+		$("#userScore").text(userScore += yellowValue);
+		if (userScore === targetNum){
 			wins++;
 			updatewins();
 			reset();
 			
-		} if (score > targetNum) 
+		} else if (userScore >= targetNum) 
 			losses++;
 			updatelosses();
 			reset();
 	});
 
 	$("#purple").on("click", function(){
-		$("#userScore").text(score += purpleValue);
-		if (score === targetNum){
+		$("#userScore").text(userScore += purpleValue);
+		if (userScore === targetNum){
 			wins++;
 			updatewins();
 			reset();
 			
-		} if (score > targetNum) 
+		} else if (userScore >= targetNum) 
 			losses++;
 			updatelosses();
 			reset();
@@ -111,4 +116,6 @@ var reset = function (){
 
 
 });
+
+
 

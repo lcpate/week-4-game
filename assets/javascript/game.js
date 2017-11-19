@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 // Functions to randomize crystal value and target number
- $(".btn-success").on("click", function() {
+ $(".btn-block").on("click", function() {
 
         var pinkValue = Math.floor(Math.random() * 11) + 1;
         	console.log("pink " + pinkValue);;

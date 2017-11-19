@@ -8,10 +8,9 @@ background: linear-gradient(to bottom, #A770EF, #CF8BF3, #FDB99B); /* W3C, IE 10
 
 }
 
-.card-title{
-	font-size: 20px;
+button.btn.btn-primary.btn-lg.btn-block{
+	background-color: #EFBD70;
 }
-
 
 #pink,
 #blue,

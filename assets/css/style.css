@@ -1,6 +1,15 @@
 
 body{
-	background-image: url("../images/memphis-colorful.png");
+	/*background-image: url("../images/memphis-colorful.png");*/
+	background: #A770EF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #A770EF, #CF8BF3, #FDB99B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #A770EF, #CF8BF3, #FDB99B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.card-title{
+	font-size: 20px;
 }
 
 
@@ -15,7 +24,8 @@ body{
 
 h1{
 	text-align: center;
-	color: purple;
+	color: white;
+	font-family: 'Bungee Shade', cursive;
 }
 
 
